@@ -15,7 +15,7 @@ const InvitationCard = () => {
       <div className={`
         absolute 
         /* En móvil: esquina inferior derecha de la tarjeta */
-        bottom-0 right-0 
+        bottom-25 right-0 
         /* En desktop: al lado derecho de la tarjeta */
         sm:bottom-auto sm:right-[13%] sm:top-1/2 sm:-translate-y-1/2 
         
