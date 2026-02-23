@@ -103,7 +103,7 @@ const InvitationCard = () => {
             <p className={`text-stone-500 text-sm transition-all duration-1000 delay-500 ${
               isVisible ? 'opacity-100' : 'opacity-0'
             }`}>
-              9:00 AM · Aula C302
+              Martes 9:00 AM · Aula C302
             </p>
             <p className={`text-stone-400 text-xs transition-all duration-1000 delay-500 ${
               isVisible ? 'opacity-100' : 'opacity-0'
