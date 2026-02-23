@@ -11,26 +11,37 @@ const InvitationCard = () => {
   return (
     <section className="min-h-screen flex items-center justify-center bg-stone-100 p-4 relative overflow-hidden">
       
-      {/* ====================================== */}
-      {/* 🌸 IMAGEN FLOTANTE - COLOCAR AQUÍ 🌸 */}
-      {/* ====================================== */}
-      <div className={`absolute left-[5%] top-1/2 -translate-y-1/2 w-48 h-48 md:w-64 md:h-64 pointer-events-none transition-all duration-1000 delay-500 ${
-        isVisible ? 'opacity-30 translate-x-0' : 'opacity-0 -translate-x-10'
-      }`}>
+      {/* 🎪 PAYASITO - RESPONSIVE */}
+      <div className={`
+        absolute 
+        /* En móvil: esquina inferior derecha de la tarjeta */
+        bottom-0 right-0 
+        /* En desktop: al lado derecho de la tarjeta */
+        sm:bottom-auto sm:right-[13%] sm:top-1/2 sm:-translate-y-1/2 
         
-      </div>
-
-      {/* También puedes agregar otra del lado derecho para balancear */}
-      <div className={`absolute right-[12%] top-1/2 -translate-y-1/2 w-60 h-60 md:w-56 md:h-56 pointer-events-none transition-all duration-1000 delay-700 ${
-        isVisible ? 'opacity-90 translate-x-0' : 'opacity-0 translate-x-10'
-      }`}>
-        <div className="relative w-full h-full animate-float-slow" style={{ animationDelay: '2s' }}>
+        /* Tamaños */
+        w-50 h-50 
+        sm:w-40 sm:h-40
+        md:w-40 md:h-40 
+        lg:w-56 lg:h-56 
+        
+        /* Estilos */
+        pointer-events-none 
+        transition-all duration-1000 delay-700 
+        z-10 /* Asegura que esté sobre la tarjeta en móvil */
+        
+        ${isVisible ? 'opacity-90 sm:opacity-90 md:opacity-90 translate-x-0 translate-y-0' : 'opacity-0 translate-y-10 sm:translate-y-0 sm:translate-x-10'}
+      `}>
+        <div className="relative w-full h-full animate-float-slow">
           <img 
             src={paya} 
-            className="w-full h-full object-contain scale-x-[-1]" // Volteada horizontalmente
+            alt="Decoración"
+            className="w-full h-full object-contain"
           />
         </div>
       </div>
+
+      
 
       {/* Tu carta existente (sin cambios) */}
       <div className={`max-w-xl w-full bg-white p-8 md:p-12 relative transform transition-all duration-1000 ${
